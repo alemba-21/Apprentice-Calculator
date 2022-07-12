@@ -13,18 +13,18 @@
     <div class="container">
         <form name="form">
             <div class="display">
-                <input type="text" placeholder="0" name="displayResult" />
+                <input type="text" id="display" placeholder="0" name="displayResult" />
             </div>
             <div class="buttons">
                 <div class="row">
-                    <input type="button" name="b7" value="7">
-                    <input type="button" name="b8" value="8" >
-                    <input type="button" name="b9" value="9" >
-                    <input type="button" name="addb" value="+" >
+                    <input type="button" name="b7" value="7" onClick="calcNumbers(b7.value)">
+                    <input type="button" name="b8" value="8" onClick="calcNumbers(b8.value)">
+                    <input type="button" name="b9" value="9" onClick="calcNumbers(b9.value)">
+                    <input type="button" name="addb" value="+" onClick="calcNumbers(addb.value)">
                 </div>
 
                 <div class="row">
-                    <input type="button" name="b4" value="4" >
+                    <input type="button" name="b4" value="4"  onClick="calcNumbers(b4.value)">
                     <input type="button" name="b5" value="5" onClick="calcNumbers(b5.value)">
                     <input type="button" name="b6" value="6" onClick="calcNumbers(b6.value)">
                     <input type="button" name="subb" value="-" onClick="calcNumbers(subb.value)">
@@ -43,8 +43,11 @@
                     <input type="button" name="divb" value="/" onClick="calcNumbers(divb.value)">
                     <input type="button" class="red" value="=" onClick="displayResult.value=eval(displayResult.value)">
                 </div>
+                <div id="row">
+                    <input type="button" id="clearNumbers" name="clear" value="c" onclick="">
+                    <input type="button" id="deleteNumber" name="del" value="del" onclick="deleteNum()">
+                </div>
             </div>
-
         </form>
     </div>
     <script src="./js/main.js"></script>
